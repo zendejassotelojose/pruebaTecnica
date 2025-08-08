@@ -9,7 +9,7 @@ import { UserModel } from "../models/user.model.js";
 
 export class UserController {
 
-    async register(req: Request, res: Response): Promise<Response> {
+    static async register(req: Request, res: Response): Promise<Response> {
         const { email, password }: RegisterUserDto = req.body;
         try {
             const hashedPassword = await bcrypt.hash(password, 10);
@@ -23,7 +23,7 @@ export class UserController {
 
     }
 
-    async login(req: Request, res: Response): Promise<Response> {
+    static async login(req: Request, res: Response): Promise<Response> {
         const { email, password }: LoginUserDto = req.body;
         try {
             const user = await UserModel.findOne({ email });

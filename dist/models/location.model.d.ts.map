@@ -1,0 +1,1 @@
+{"version":3,"file":"location.model.d.ts","sourceRoot":"","sources":["../../src/models/location.model.ts"],"names":[],"mappings":"AAAA,OAAO,EAAe,QAAQ,EAAE,MAAM,UAAU,CAAC;AAEjD,MAAM,WAAW,SAAU,SAAQ,QAAQ;IACvC,OAAO,EAAE,MAAM,CAAC;IAChB,QAAQ,EAAE,MAAM,CAAC;IACjB,OAAO,EAAE,MAAM,CAAC;IAChB,QAAQ,EAAE,MAAM,CAAC;CACpB;AASD,eAAO,MAAM,QAAQ;;;;OAA+C,CAAC"}
