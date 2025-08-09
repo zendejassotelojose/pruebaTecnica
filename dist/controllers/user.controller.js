@@ -8,7 +8,7 @@ export class UserController {
             const hashedPassword = await bcrypt.hash(password, 10);
             const newUser = new UserModel({ email, password: hashedPassword });
             await newUser.save();
-            return res.status(201).json({ message: "Usuario registrado exitosamente" });
+            return res.status(201).json({ message: "Usuario registrado exitosamente", newUser });
         }
         catch (error) {
             return res.status(500).json({ message: "Error al registrar usuario", error });
