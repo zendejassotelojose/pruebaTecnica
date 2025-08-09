@@ -35,4 +35,14 @@ export class TruckController {
         return res.status(500).json({ error: "Error al obtener los detalles del camión" });
       }
     };
+
+    static async deleteTruck(req: Request, res: Response) {
+      try {
+        const id = req.params.id;
+        await TruckModel.findByIdAndDelete(id);
+        return res.status(204).json({message: "Camión eliminado correctamente"});
+      } catch (error) {
+        return res.status(500).json({ error: "Error al eliminar el camión" });
+      }
+    }
 }

@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { TruckController } from "../controllers/truck.controller.js";
 const router = Router();
-router.post("/register/truck", TruckController.registerTruck);
-router.put("/update/truck/:id", TruckController.updateTruck);
-router.get("/details/truck/:id", TruckController.getTruckDetails);
+router.post("/register", TruckController.registerTruck);
+router.put("/update/:id", TruckController.updateTruck);
+router.get("/details/:id", TruckController.getTruckDetails);
+router.delete("/delete/:id", TruckController.deleteTruck);
 export default router;
 //# sourceMappingURL=truck.route.js.map
