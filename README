@@ -1,0 +1,48 @@
+# Prueba Backend
+
+API REST construida con **Node.js**, **TypeScript** y **MongoDB** parala gestión de usuarios,  ubicaciones, camiones y órdenes de transporte.
+
+Tecnologías usadas
+- **Node.js** + **TypeScript**
+- **Express**
+- **MongoDB** + **Mongoose**
+- **Google Places API**
+- **Bcrypt** para hashear contraseñas
+- **Dotenv** para variables de entorno
+
+Estructura
+
+- Esta API esta estructurada de una forma muy sencilla:
+    **Models**
+    **Dtos**
+    **Controllers**
+    **Routes**
+    
+- **Models**
+- Contienen los esquemas y modelos de Mongoose para interactuar con MongoDB.
+- **Dtos**
+- Definiciones de tipos e interfaces para tipar y estructurar los datos de entrada/salida.
+- **Controllers**
+- Contienen la lógica y control de cada recurso de la API.
+- **Routes**
+- Definen las rutas y asocian los controladores con los endpoints.
+
+Funcionalidad
+
+Esta API permite gestionar la logística de transporte, incluyendo:
+
+1. **Ubicaciones (Locations)**  
+   - Registrar ubicaciones a partir de un `place_id` de Google Maps.  
+   - Consultar todas las ubicaciones registradas.  
+   - Actualizar ubicación y obtener automáticamente dirección y coordenadas si se cambia el `place_id` o cualquier campo que desee cambiarse.  
+   - Eliminar ubicaciones.
+
+2. **Órdenes (Orders)**  
+   - Crear órdenes de transporte asociando un usuario, un camión y dos ubicaciones (`pickUp` y `dropOff`).  
+   - Actualizar el estado de la orden (`created`, `in transit`, `completed`).  
+   - Consultar todas las órdenes.  
+
+3. **Integración con Google Places API**  
+   - A partir de un `place_id`, la API obtiene:  
+     - Dirección formateada (`formatted_address`)  
+     - Latitud y longitud (`geometry.location`)  
