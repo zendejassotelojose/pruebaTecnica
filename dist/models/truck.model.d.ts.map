@@ -1,0 +1,1 @@
+{"version":3,"file":"truck.model.d.ts","sourceRoot":"","sources":["../../src/models/truck.model.ts"],"names":[],"mappings":"AAAA,OAAO,QAAoB,MAAM,UAAU,CAAC;AAE5C,MAAM,WAAW,MAAM;IACrB,IAAI,EAAE,QAAQ,CAAC,KAAK,CAAC,QAAQ,CAAC;IAC9B,IAAI,EAAE,MAAM,CAAC;IACb,KAAK,EAAE,MAAM,CAAC;IACd,KAAK,EAAE,MAAM,CAAC;CACf;AASD,eAAO,MAAM,UAAU;;;;OAA+C,CAAC"}
